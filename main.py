@@ -12,7 +12,7 @@ def ConstBoard(board):
 
 def User1Turn(board):#Multiplayer user 2
   while(True):
-    pos = int(input("Enter X's pos where you want to place it from [1-9]: "))
+    pos = int(input("\nEnter X's pos where you want to place it from [1-9]: "))
     print("\n")
     if(board[pos-1] != 0):
       print("Wrong Move")
@@ -24,7 +24,7 @@ def User1Turn(board):#Multiplayer user 2
 
 def User2Turn(board):#Multiplayer user 2
   while(True):
-    pos = int(input("Enter O's pos where you want to place it from [1-9]: "))
+    pos = int(input("\nEnter O's pos where you want to place it from [1-9]: "))
     print
     if(board[pos-1] != 0):
       print("Wrong Move")
@@ -35,7 +35,7 @@ def User2Turn(board):#Multiplayer user 2
 
 def UserTurn(board, sym):#When playing with Computer
   while(True):
-    print("Enter ",sym,"'s pos where you want to place it from [1-9]: ")
+    print("\nEnter ",sym,"'s pos where you want to place it from [1-9]: ")
     pos = int(input())
     if(board[pos-1] != 0):
       print("Wrong Move")
@@ -105,10 +105,10 @@ def CompTurn(board, sym):
 
 
 def main():
-  choice = int(input("Enter 1 for Single-Player game or 2 for Multi-Player Game: "))
+  choice = int(input("Enter 1 for Single-Player game or 2 for Multi-Player Game: \n"))
   board = [0,0,0,0,0,0,0,0,0]#Initial Board
   if (choice == 1):
-    symbol = input("What do you want to chose X or O: ")
+    symbol = input("\n\nWhat do you want to chose X or O: ")
     if(symbol == 'X'):
       compSymbol = 'O'
     else:
